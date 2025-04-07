@@ -16,7 +16,7 @@ def load_data():
     if not file_path:
         return None
     try:
-        df = pd.read_csv(file_path)
+        df = pd.read_csv(file_path) 
         if not {'precipitation', 'temp_max', 'temp_min', 'wind', 'weather'}.issubset(df.columns):
             messagebox.showerror("Error", "Dataset must contain precipitation, temp_max, temp_min, wind, and weather columns.")
             return None
